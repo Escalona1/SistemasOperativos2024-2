@@ -141,7 +141,7 @@ int main(){
         char* buscar = check_buscar(command);
         long int* eliminar = check_eliminar(command);
 
-        if(strcmp(command, "q\n") == 0){
+        if(strcmp(command, "exit\n") == 0){
             break;
         }
 
