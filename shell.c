@@ -62,7 +62,7 @@ void exec_(char** pipeArgs, int numPipes) {
 
     } 
     else {
-        int (*p)[2] = malloc(numPipes * sizeof(int[2]));
+        int (*p)[2] = malloc((numPipes - 1) * sizeof(int[2]));
 
         for (int i = 0; i < numPipes; i++) {
             pipe(p[i]);
@@ -82,7 +82,7 @@ void exec_(char** pipeArgs, int numPipes) {
                     close(p[i][1]);  
                 }
 
-                char** args;
+                char** args = malloc(100 * sizeof(char*));;
                 parse_command(pipeArgs[i], args);
 
                 if (execvp(args[0], args) == -1)
