@@ -54,7 +54,7 @@ int parse_and(char* command, char** AND_ARRAY){
 void exec_(char** pipeArgs, int numPipes) {
 
     if (numPipes == 1) {
-        char** args;
+        char** args = malloc(100 * sizeof(char*));
         parse_command(pipeArgs[0], args);
         
         if (execvp(args[0], args) == -1)
@@ -82,7 +82,7 @@ void exec_(char** pipeArgs, int numPipes) {
                     close(p[i][1]);  
                 }
 
-                char** args = malloc(100 * sizeof(char*));;
+                char** args = malloc(100 * sizeof(char*));
                 parse_command(pipeArgs[i], args);
 
                 if (execvp(args[0], args) == -1)
