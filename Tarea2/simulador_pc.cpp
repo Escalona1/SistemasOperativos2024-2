@@ -9,8 +9,6 @@
 #include <stdlib.h>
 #include <chrono>
 
-//FALTA LOG, INCLUIR CREACION, MUERTE DE HEBRAS Y CAMBIOS DE TAMAÑO 
-
 int Productor(){
     int producto = rand() % 100;
     std::cout << "Producto: " << producto << std::endl;
