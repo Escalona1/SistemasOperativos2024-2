@@ -81,7 +81,6 @@ private:
 
     void Reloj() {
         while (true) {
-            // Verificar el marco apuntado por el puntero del reloj
             if (!marcos[puntero_reloj].referencia) {
 
                 int pageToReplace = marcos[puntero_reloj].numero_de_pagina;

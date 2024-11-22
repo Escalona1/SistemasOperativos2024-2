@@ -1,0 +1,236 @@
+Productor muerto de cansancio
+Productor muerto de cansancio
+Productor muerto de cansancio
+Resize: 100
+Productor muerto de cansancio
+Productor muerto de cansancio
+Productor muerto de cansancio
+Resize: 200
+Productor muerto de cansancio
+Productor muerto de cansancio
+Productor muerto de cansancio
+Productor muerto de cansancio
+Productor muerto de cansancio
+Productor muerto de cansancio
+Progreso: 0.5%
+Progreso: 1%
+Progreso: 1.5%
+Progreso: 2%
+Progreso: 2.5%
+Progreso: 3%
+Progreso: 3.5%
+Progreso: 4%
+Progreso: 4.5%
+Progreso: 5%
+Progreso: 5.5%
+Progreso: 6%
+Progreso: 6.5%
+Progreso: 7%
+Progreso: 7.5%
+Progreso: 8%
+Progreso: 8.5%
+Progreso: 9%
+Progreso: 9.5%
+Progreso: 10%
+Progreso: 10.5%
+Progreso: 11%
+Progreso: 11.5%
+Progreso: 12%
+Progreso: 12.5%
+Progreso: 13%
+Progreso: 13.5%
+Progreso: 14%
+Progreso: 14.5%
+Progreso: 15%
+Progreso: 15.5%
+Progreso: 16%
+Progreso: 16.5%
+Progreso: 17%
+Progreso: 17.5%
+Progreso: 18%
+Progreso: 18.5%
+Progreso: 19%
+Progreso: 19.5%
+Progreso: 20%
+Progreso: 20.5%
+Progreso: 21%
+Progreso: 21.5%
+Progreso: 22%
+Progreso: 22.5%
+Progreso: 23%
+Progreso: 23.5%
+Progreso: 24%
+Progreso: 24.5%
+Progreso: 25%
+Progreso: 25.5%
+Progreso: 26%
+Progreso: 26.5%
+Progreso: 27%
+Progreso: 27.5%
+Progreso: 28%
+Progreso: 28.5%
+Progreso: 29%
+Progreso: 29.5%
+Progreso: 30%
+Progreso: 30.5%
+Progreso: 31%
+Progreso: 31.5%
+Progreso: 32%
+Progreso: 32.5%
+Progreso: 33%
+Progreso: 33.5%
+Progreso: 34%
+Progreso: 34.5%
+Progreso: 35%
+Progreso: 35.5%
+Progreso: 36%
+Progreso: 36.5%
+Progreso: 37%
+Progreso: 37.5%
+Progreso: 38%
+Progreso: 38.5%
+Progreso: 39%
+Progreso: 39.5%
+Progreso: 40%
+Progreso: 40.5%
+Progreso: 41%
+Progreso: 41.5%
+Progreso: 42%
+Progreso: 42.5%
+Progreso: 43%
+Progreso: 43.5%
+Progreso: 44%
+Progreso: 44.5%
+Progreso: 45%
+Progreso: 45.5%
+Progreso: 46%
+Progreso: 46.5%
+Progreso: 47%
+Progreso: 47.5%
+Progreso: 48%
+Progreso: 48.5%
+Progreso: 49%
+Progreso: 49.5%
+Progreso: 50%
+Progreso: 50.5%
+Progreso: 51%
+Progreso: 51.5%
+Progreso: 52%
+Progreso: 52.5%
+Progreso: 53%
+Progreso: 53.5%
+Progreso: 54%
+Progreso: 54.5%
+Progreso: 55%
+Progreso: 55.5%
+Progreso: 56%
+Progreso: 56.5%
+Progreso: 57%
+Progreso: 57.5%
+Progreso: 58%
+Progreso: 58.5%
+Progreso: 59%
+Progreso: 59.5%
+Progreso: 60%
+Progreso: 60.5%
+Progreso: 61%
+Progreso: 61.5%
+Progreso: 62%
+Progreso: 62.5%
+Progreso: 63%
+Progreso: 63.5%
+Progreso: 64%
+Progreso: 64.5%
+Progreso: 65%
+Progreso: 65.5%
+Progreso: 66%
+Progreso: 66.5%
+Progreso: 67%
+Progreso: 67.5%
+Progreso: 68%
+Progreso: 68.5%
+Progreso: 69%
+Progreso: 69.5%
+Progreso: 70%
+Progreso: 70.5%
+Progreso: 71%
+Progreso: 71.5%
+Progreso: 72%
+Progreso: 72.5%
+Progreso: 73%
+Progreso: 73.5%
+Progreso: 74%
+Progreso: 74.5%
+Resize: 100
+Progreso: 75%
+Progreso: 75.5%
+Progreso: 76%
+Progreso: 76.5%
+Progreso: 77%
+Progreso: 77.5%
+Progreso: 78%
+Progreso: 78.5%
+Progreso: 79%
+Progreso: 79.5%
+Progreso: 80%
+Progreso: 80.5%
+Progreso: 81%
+Progreso: 81.5%
+Progreso: 82%
+Progreso: 82.5%
+Progreso: 83%
+Progreso: 83.5%
+Progreso: 84%
+Progreso: 84.5%
+Progreso: 85%
+Progreso: 85.5%
+Progreso: 86%
+Progreso: 86.5%
+Progreso: 87%
+Resize: 50
+Progreso: 87.5%
+Progreso: 88%
+Progreso: 88.5%
+Progreso: 89%
+Progreso: 89.5%
+Progreso: 90%
+Progreso: 90.5%
+Progreso: 91%
+Progreso: 91.5%
+Progreso: 92%
+Progreso: 92.5%
+Progreso: 93%
+Progreso: 93.5%
+Resize: 25
+Progreso: 94%
+Progreso: 94.5%
+Progreso: 95%
+Progreso: 95.5%
+Progreso: 96%
+Progreso: 96.5%
+Resize: 12
+Progreso: 97%
+Progreso: 97.5%
+Progreso: 98%
+Resize: 6
+Progreso: 98.5%
+Progreso: 99%
+Resize: 3
+Progreso: 99.5%
+Resize: 1
+Progreso: 100%
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre
+Consumidor muerto de hambre

@@ -8,16 +8,20 @@
 #include <vector>
 #include <stdlib.h>
 #include <chrono>
+#include <fstream>
+
+std::ofstream logFile;
+
 
 int Productor(){
     int producto = rand() % 100;
-    std::cout << "Producto: " << producto << std::endl;
+    //logFile << "Producto: " << producto << std::endl;
     return producto;
 }
 
 void Consumidor(float producto){
     float consumo = sqrt(producto);
-    std::cout << "Consumo: " << consumo << std::endl;
+    //logFile << "Consumo: " << consumo << std::endl;
 }
 
 class Monitor {
@@ -27,6 +31,8 @@ private:
     int in = 0, out = 0;
     int N;
     int t;
+    int countConsumido = 0;
+    int aProducir;
     std::mutex mutex;
     std::condition_variable cv;
 
@@ -46,7 +52,7 @@ private:
     }
 
 public:
-    Monitor(int N, int t): N(N), t(t), buffer(new int[N]), contador(0) {}
+    Monitor(int N, int t, int aProducir): N(N), t(t), aProducir(aProducir), buffer(new int[N]), contador(0) {}
     ~Monitor() { delete[] buffer; }
 
     void Producir(int producto) {
@@ -54,7 +60,7 @@ public:
 
         if (contador == N){
             resize(N*2);
-            std::cout << "Re-size: " << N << std::endl;
+            logFile << "Resize: " << N << std::endl;
         }
 
         cv.wait(lock, [this] { return contador < N; });
@@ -67,12 +73,11 @@ public:
     }
 
     int Consumir() {
-        std::cout << N << std::endl;
+
         std::unique_lock<std::mutex> lock(mutex);
         auto timeout = std::chrono::seconds(t);
 
         if (!cv.wait_for(lock, timeout, [this] { return contador > 0; })) return -1;
-          // Espera mientras el buffer esté vacío
 
         int consumir = buffer[out];
         out = (out + 1) % N;
@@ -81,23 +86,25 @@ public:
 
         if (contador <= N / 4 && N > 2){
             resize(N / 2);
-            std::cout << "Re-size: " << N << std::endl;
+            logFile << "Resize: " << N << std::endl;
         }
 
+        countConsumido++;
+        logFile << "Progreso: "<< countConsumido * 100.0 / aProducir << "%" <<std::endl;
         cv.notify_one();  // Notifica a un productor que hay espacio disponible
 
         return consumir;
     }
 };
 
-void Thread_Productor(Monitor& monitor) {
+void Thread_Productor(Monitor& monitor, int numProduccion) {
 
-    for (int i = 0; i < 50 ; i++) {
+    for (int i = 0; i < numProduccion; i++) {
         int producto = Productor();
         monitor.Producir(producto);
     }
 
-    std::cout << "Productor muerto de cansancio" << std::endl;
+    logFile << "Productor muerto de cansancio" << std::endl;
 }
 
 void Thread_Consumidor(Monitor& monitor) {
@@ -108,7 +115,7 @@ void Thread_Consumidor(Monitor& monitor) {
         int consumo = monitor.Consumir();
 
         if (consumo == -1){
-            std::cout << "Consumidor muerto de hambre" << std::endl;
+            logFile << "Consumidor muerto de hambre" << std::endl;
             break;
         }
 
@@ -117,24 +124,34 @@ void Thread_Consumidor(Monitor& monitor) {
 }
 
 int main(int argc, char* argv[]) {
+
     srand(time(NULL));
 
-    // Simulando que p, c, s, y t son obtenidos como parámetros:
-    int p = std::atoi(argv[2]);
-    int c = std::atoi(argv[4]);
-    int s = std::atoi(argv[6]);
-    int t = std::atoi(argv[8]);
+    logFile.open("log.txt", std::ios::out | std::ios::trunc);
+
+    if (!logFile.is_open()) {
+        std::cerr << "Error al abrir el archivo de log." << std::endl;
+        return 1;
+    }
+
+    int p = std::atoi(argv[2]); //Numero de productores
+    int c = std::atoi(argv[4]); //Numedo de consumidores
+    int s = std::atoi(argv[6]); //Tamaño de la cola
+    int t = std::atoi(argv[8]); //Tiempo de espera cosumidores
+
+    int numProduccion = 20; // Cantidad elementos a producir por porductor
+    int aProducir = numProduccion * p; //Cantidad de elementos a producir
 
     if (p <= 0 || c <= 0 || s <= 0) {
         std::cerr << "Los parámetros deben ser mayores que 0.\n";
         return 1;
     }
 
-    Monitor monitor(s, t);
+    Monitor monitor(s, t, aProducir);
 
     std::vector<std::thread> productores;
     for (int i = 0; i < p; i++) {
-        productores.emplace_back(Thread_Productor, std::ref(monitor));
+        productores.emplace_back(Thread_Productor, std::ref(monitor), numProduccion);
     }
 
     std::vector<std::thread> consumidores;
